@@ -1,0 +1,203 @@
+/* src/App.css */
+
+/* Estilos gerais para o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinha no topo */
+  min-height: 100vh;
+}
+
+/* Container principal do formulário */
+.container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 850px; /* Limita a largura para melhor leitura */
+  box-sizing: border-box; /* Garante que padding e border não aumentem a largura total */
+}
+
+/* Título do formulário */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 2em;
+}
+
+/* Estilo para os fieldsets (grupos de campos) */
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 25px;
+  background-color: #fdfdfd;
+}
+
+/* Legendas dos fieldsets */
+legend {
+  font-weight: bold;
+  color: #555;
+  padding: 0 10px;
+  margin-left: -10px; /* Ajusta a posição da legenda */
+  font-size: 1.1em;
+}
+
+/* Divs para agrupar label e input */
+fieldset > div {
+  margin-bottom: 15px; /* Espaçamento entre os campos */
+}
+
+/* Estilo para labels */
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Estilo para inputs de texto e selects */
+input[type="text"],
+input[type="email"],
+select {
+  width: calc(100% - 20px); /* Ajusta para padding */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+  box-sizing: border-box; /* Inclui padding e border na largura */
+  transition: border-color 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Estilo para botões */
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+/* Estilo do botão principal de submit */
+button.botao-principal {
+  background-color: #007bff;
+  width: 100%;
+  margin-top: 20px;
+}
+
+button.botao-principal:hover {
+  background-color: #0056b3;
+}
+
+
+/* ======================================= */
+/* --- ESTILOS PARA TELEFONES E EMAILS --- */
+/* ======================================= */
+
+.campo-telefone,
+.campo-email { /* Aplica os mesmos estilos para ambos */
+  display: flex;
+  align-items: flex-end; /* Alinha os campos e o botão */
+  gap: 10px;
+  flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+}
+
+.campo-telefone > div,
+.campo-email > div {
+  flex-grow: 1; /* Faz os campos crescerem */
+  margin-bottom: 0; /* Remove a margem extra */
+}
+
+.campo-telefone .numero-telefone,
+.campo-email .endereco-email { /* Campos de número e email crescem mais */
+  flex-grow: 2; 
+}
+
+.botao-adicionar {
+  background-color: #28a745; /* Verde */
+  padding: 8px 12px;
+  font-size: 14px;
+  flex-shrink: 0; /* Impede que o botão encolha */
+  height: 38px; /* Altura ajustada para alinhar com os inputs */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-adicionar:hover {
+  background-color: #218838;
+}
+
+.lista-itens {
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.item-adicionado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 8px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  border: 1px solid #e0e0e0;
+}
+
+.item-adicionado span {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  font-size: 0.95em;
+}
+
+.botao-remover {
+  background-color: #dc3545; /* Vermelho */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Faz o botão ser redondo */
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px; /* Centraliza o "X" */
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Impede que o botão encolha */
+}
+
+.botao-remover:hover {
+  background-color: #c82333;
+}
+
+/* Correção para o estilo do botão principal (submit) */
+button[type="submit"] {
+  background-color: #007bff;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+} 
